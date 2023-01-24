@@ -1,0 +1,38 @@
+public class Main {
+    public static void main(String[] args) {
+
+        //clase persona: nombre,edad, telefono
+        // clase cliente que herede de persona,+ variable credito
+        //objeto de la clase cliente: edad, telefono, nombre y credito, darles valor, mostrarlo en pantalla
+        // lo mismo con clase trabajador que herede de persona + variable salario
+        Cliente cliente = new Cliente();
+        cliente.nombre = "juan";
+        cliente.edad = 15;
+        cliente.telefono = 987654321;
+
+            Trabajador trabajador = new Trabajador();
+            trabajador.salario = 1000;
+
+
+        System.out.println(cliente.nombre);
+        System.out.println(cliente.edad);
+        System.out.println(cliente.telefono);
+        System.out.println(cliente.credito);
+        System.out.println(trabajador.salario);
+    }
+}
+abstract class Persona {
+    String nombre ;
+    int edad;
+    int telefono;
+
+}
+class Cliente extends Persona {
+
+    int credito;
+}
+
+class Trabajador extends Persona {
+    int salario;
+
+}
